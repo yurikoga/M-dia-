@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #ebf0f3; /* Cor de fundo crucial para o efeito */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    gap: 30px;
+}
+
+.icon-btn {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #ebf0f3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    
+    /* Sombra externa (Botão para fora) */
+    box-shadow: 
+        -8px -8px 12px rgba(255, 255, 255, 0.9),
+        8px 8px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Efeito ao passar o mouse ou classe ativa */
+.icon-btn:hover, .icon-btn.pressed {
+    box-shadow: 
+        inset -4px -4px 8px rgba(255, 255, 255, 0.9),
+        inset 4px 4px 8px rgba(0, 0, 0, 0.1);
+    transform: scale(0.98);
+}
+
+.icon-btn i {
+    transition: transform 0.2s ease;
+}
+
+.icon-btn:hover i {
+    transform: scale(0.9);
+}
